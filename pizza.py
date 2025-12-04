@@ -1,10 +1,9 @@
-# Armazena informações sobre uma pizza que está sendo pedida
-pizza = {
-    'crust': 'thick',
-    'toppings': ['mushrooms', 'extra cheese'],
-}
+def make_pizza(size, *toppings):
+    """Apresenta a pizza que estamos prestes a preparar"""
+    print("\nMaking a " + str(size) + "-inch pizza with the following toppings:")
+    for topping in toppings:
+        print("- " + topping)
 
-# Resume o pedido
-print(f"You ordered a {pizza['crust']}-crust pizza with the following toppings:")
-for topping in pizza['toppings']:
-    print(f"\t{topping}")
+
+make_pizza('pepperoni')
+make_pizza('mushrooms', 'green peppers', 'extra cheese')
